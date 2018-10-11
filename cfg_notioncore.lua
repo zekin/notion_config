@@ -19,6 +19,7 @@
 -- of the bindings. Similarly ALTMETA may be redefined to add a
 -- modifier to some of the F-key bindings.
 
+
 defbindings("WScreen", {
     bdoc("Switch to n:th object (workspace, full screen client window) "..
          "within current screen."),
@@ -92,6 +93,7 @@ defbindings("WScreen", {
            "_chld:non-nil"),
     kpress(META.."K", "ioncore.goto_next(_chld, 'up')",
            "_chld:non-nil"),
+
     submap(META.."O", {
         bdoc("Backward-circulate focus."),
         kpress("AnyModifier+Tab", "ioncore.goto_next(_chld, 'left')",
@@ -237,6 +239,14 @@ defbindings("WFrame", {
     bdoc("Switch to next/previous object within the frame."),
     mclick(META.."Button4", "WFrame.switch_next(_)"),
     mclick(META.."Button5", "WFrame.switch_prev(_)"),
+
+    -- pulled from snarfed.org/dotfiles/.notion/cfg_ioncore.lua and /usr/share/notion/contrib/scripts/move_current.lua
+    bdoc("Switch frame over to next group."),
+    kpress(META.."Shift+H", "_:manager():nextto(_,'left'):attach(_:current(), { switchto=true })"),
+    kpress(META.."Shift+J", "_:manager():nextto(_,'down'):attach(_:current(), { switchto=true })"),
+    kpress(META.."Shift+K", "_:manager():nextto(_,'up'):attach(_:current(), { switchto=true })"),
+
+    kpress(META.."Shift+L", "_:manager():nextto(_,'right'):attach(_:current(), { switchto=true })"),
 })
 
 -- Frames for transient windows ignore this bindmap
