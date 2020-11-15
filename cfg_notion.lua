@@ -22,7 +22,7 @@ META="Mod1+"
 --ALTMETA=""
 
 -- Terminal emulator.
---XTERM="xterm"
+XTERM="xterm -bg black -fg white -xrm 'XTerm*selectToClipboard: true'"
 
 -- Some basic settings.
 ioncore.set{

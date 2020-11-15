@@ -96,6 +96,9 @@ defbindings("WScreen", {
     bdoc("Display the main menu."),
 --    kpress("F12", "mod_menu.menu(_, _sub, 'mainmenu', {big=true})"),
     kpress(META.."F12", "mod_query.query_menu(_, _sub, 'mainmenu', 'Main menu:')"),
+    kpress("Mod4+Shift+S", "mod_query.exec_on_merr(_, 'flameshot gui')"),
+
+
     mpress("Button3", "mod_menu.pmenu(_, _sub, 'mainmenu')"),
 
     bdoc("Display the window list menu."),
@@ -111,8 +114,8 @@ defbindings("WScreen", {
            "_chld:non-nil"),
 
     bdoc("Backward-circulate focus.", "<-frame"),
---    kpress(META.."H", "ioncore.goto_next(_chld, 'left')",
---           "_chld:non-nil"),
+    kpress(META.."H", "ioncore.goto_next(_chld, 'left')",
+           "_chld:non-nil"),
 
     kpress(META.."J", "ioncore.goto_next(_chld, 'down')",
            "_chld:non-nil"),
@@ -181,6 +184,9 @@ defbindings("WMPlex.toplevel", {
 
     bdoc("Lock screen", "lock"),
 --    kpress(META.."L", "notioncore.exec_on(_, notioncore.lookup_script('notion-lock'))"),
+-- 
+    kpress(META.."N", "WFrame.switch_prev(_)"),
+    kpress(META.."P", "WFrame.switch_next(_)"),
 
     bdoc("Run a terminal emulator.", "xterm"),
     kpress(META.."Return", "mod_query.exec_on_merr(_, XTERM or 'xterm')"),
@@ -335,8 +341,8 @@ defbindings("WMoveresMode", {
     kpress("Down",  "WMoveresMode.resize(_, 0, 0, 0, 1)"),
     kpress("F",     "WMoveresMode.resize(_, 1, 0, 0, 0)"),
     kpress("B",     "WMoveresMode.resize(_, 0, 1, 0, 0)"),
-    kpress("P",     "WMoveresMode.resize(_, 0, 0, 1, 0)"),
-    kpress("N",     "WMoveresMode.resize(_, 0, 0, 0, 1)"),
+--    kpress("P",     "WMoveresMode.resize(_, 0, 0, 1, 0)"),
+--    kpress("N",     "WMoveresMode.resize(_, 0, 0, 0, 1)"),
 
     bdoc("Shrink in specified direction."),
     kpress("Shift+Left",  "WMoveresMode.resize(_,-1, 0, 0, 0)"),
