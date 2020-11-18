@@ -98,6 +98,9 @@ defbindings("WScreen", {
     kpress(META.."F12", "mod_query.query_menu(_, _sub, 'mainmenu', 'Main menu:')"),
     kpress("Mod4+Shift+S", "mod_query.exec_on_merr(_, 'flameshot gui')"),
 
+    kpress("Mod4+Shift+F", "mod_query.exec_on_merr(_, 'xterm -bg black -fg white -e \"fzf -e | xargs -o nvim\"')"), 
+-- \"bash --init-file <(echo \\\"fzf\\\")\"')'"),
+
 
     mpress("Button3", "mod_menu.pmenu(_, _sub, 'mainmenu')"),
 
@@ -199,7 +202,7 @@ defbindings("WMPlex.toplevel", {
 --    kpress(ALTMETA.."J", "mod_query.query_lua(_)"),
 
     bdoc("Query for host to connect to with SSH.", "ssh"),
-    kpress(META.."F4", "mod_query.query_ssh(_, ':ssh')"),
+    kpress(META.."F4", "mod_query.exec_on_merr(_, './apps/P3X-OneNote-2020.10.178.AppImage')"),
 
     kpress(META.."F3","mod_query.query_exec(_)"),
     bdoc("Query for file to edit.", "edit"),

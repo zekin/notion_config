@@ -23,6 +23,10 @@ META="Mod1+"
 
 -- Terminal emulator.
 XTERM="xterm -bg black -fg white -xrm 'XTerm*selectToClipboard: true'"
+APP_SCREENSHOT="./apps/P3X-OneNote-2020.10.178.AppImage"
+APP_FZF_EDIT="~/scripts/openfile.sh"
+-- APP_NOTES_TOOL
+
 
 -- Some basic settings.
 ioncore.set{
