@@ -98,7 +98,7 @@ defbindings("WScreen", {
     kpress(META.."F12", "mod_query.query_menu(_, _sub, 'mainmenu', 'Main menu:')"),
     kpress("Mod4+Shift+S", "mod_query.exec_on_merr(_, 'flameshot gui')"),
 
-    kpress("Mod4+Shift+F", "mod_query.exec_on_merr(_, 'xterm -bg black -fg white -e \"fzf -e | xargs -o nvim\"')"), 
+--    kpress("Mod4+Shift+F", "mod_query.exec_on_merr(_, 'xterm -e \"fzf -e | xargs -o nvim\"')"), 
 -- \"bash --init-file <(echo \\\"fzf\\\")\"')'"),
 
 
