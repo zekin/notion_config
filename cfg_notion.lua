@@ -26,6 +26,13 @@ META="Mod1+"
 XTERM="alacritty" --"xterm -xrm 'XTerm*selectToClipboard: true'"
 APP_SCREENSHOT="./apps/P3X-OneNote-2020.10.178.AppImage"
 APP_FZF_EDIT="~/scripts/openfile.sh"
+
+defbindings("WFrame", {
+  kpress(META.."Shift+H", "_:manager():nextto(_,'left'):attach(_:current(), { switchto=true})"),
+  kpress(META.."Shift+J", "_:manager():nextto(_,'down'):attach(_:current(), { switchto=true})"),
+  kpress(META.."Shift+K", "_:manager():nextto(_,'up'):attach(_:current(), { switchto=true})"),
+  kpress(META.."Shift+L", "_:manager():nextto(_,'right'):attach(_:current(), { switchto=true})"),
+})
 -- APP_NOTES_TOOL
 
 
