@@ -36,6 +36,7 @@ defbindings("WScreen", {
   kpress(META.."Shift+3", "ioncore.goto_nth_screen(2)"),
   kpress(META.."Shift+4", "ioncore.goto_nth_screen(3)"),
 
+
 --  kpress(META.."Shift+1", "WScreen.switch_nth(_, 0)"),
 -- kpress(META.."Shift+2", "WScreen.switch_nth(_, 1)"),
 --kpress(META.."Shift+3", "WScreen.switch_nth(_, 2)"),
@@ -48,6 +49,10 @@ defbindings("WFrame", {
   kpress(META.."Control+J", "_:manager():nextto(_,'down'):attach(_:current(), { switchto=true }); ioncore.goto_next(_chld, 'down')"),
   kpress(META.."Control+K", "_:manager():nextto(_,'up'):attach(_:current(), { switchto=true } ); ioncore.goto_next(_chld, 'up')"),
   kpress(META.."Control+L", "_:manager():nextto(_,'right'):attach(_:current(), { switchto=true }); ioncore.goto_next(_chld, 'right')"),
+})
+
+defbindings("WGroupCW", {
+  kpress(META.."Return", "WGroup.set_fullscreen(_, 'toggle')"),
 })
 -- APP_NOTES_TOOL
 
