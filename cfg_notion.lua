@@ -49,6 +49,7 @@ defbindings("WFrame", {
   kpress(META.."Control+J", "_:manager():nextto(_,'down'):attach(_:current(), { switchto=true }); ioncore.goto_next(_chld, 'down')"),
   kpress(META.."Control+K", "_:manager():nextto(_,'up'):attach(_:current(), { switchto=true } ); ioncore.goto_next(_chld, 'up')"),
   kpress(META.."Control+L", "_:manager():nextto(_,'right'):attach(_:current(), { switchto=true }); ioncore.goto_next(_chld, 'right')"),
+  kpress(META.."Shift+F5", "mod_query.query_renameframe(_)"),
 })
 
 defbindings("WGroupCW", {
@@ -173,3 +174,18 @@ dopath("cfg_defaults")
 --defbindings("WMPlex.toplevel", {
 --    kpress(META.."O", "mod_menu.menu(_, _sub, 'ctxmenu')"),
 --})
+defwinprop({
+	class = "taleofdagon",
+	instance = "taleofdagon",
+	target = "Game",
+	jumpto = true,
+})
+
+defwinprop({
+	class = "Alacritty",
+	instance = "Alacritty",
+	target = "Logging",
+	jumpto = true,
+	name = "./taleofdagon /home/zekin/dev/taleofdagon",
+})
+
